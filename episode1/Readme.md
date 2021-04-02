@@ -1,7 +1,7 @@
 # GruCloud Episode 1
 
 ```sh
-npm install -g @grucloud/cor
+npm install -g @grucloud/core
 npm init [...]
 npm install @grucloud/provider-aws
 ```
