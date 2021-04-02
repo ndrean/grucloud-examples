@@ -1,0 +1,88 @@
+08:16:05.043 error: S3Bucket     getBucketTagging shouldRetryOnException {
+    "name": "getBucketTagging thedownwinder.com",
+    "error": {
+        "message": "The TagSet does not exist",
+        "code": "NoSuchTagSet",
+        "region": null,
+        "time": "2021-04-02T13:16:05.039Z",
+        "requestId": "6DSGP5T09PG12HWD",
+        "extendedRequestId": "RciFA5jjNDv75LX8XL9n6KbfJDqQUON+CNicG3Ney7Axs02h1bKl/plVdplWzaVGwy3h0KaF9vg=",
+        "statusCode": 404,
+        "retryable": false,
+        "retryDelay": 80.37594568291331
+    }
+} 
+08:16:05.044 error: S3Bucket     NoSuchTagSet: The TagSet does not exist
+    at Request.extractError (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/services/s3.js:718:35)
+    at Request.callListeners (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/sequential_executor.js:106:20)
+    at Request.emit (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/sequential_executor.js:78:10)
+    at Request.emit (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:688:14)
+    at Request.transition (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:690:12)
+    at Request.callListeners (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/sequential_executor.js:116:18) 
+08:16:05.044 error: S3Bucket     getBucketTagging shouldRetryOnException retry: false 
+08:16:05.066 error: S3Bucket     getBucketTagging shouldRetryOnException {
+    "name": "getBucketTagging www.thedownwinder.com",
+    "error": {
+        "message": "The TagSet does not exist",
+        "code": "NoSuchTagSet",
+        "region": null,
+        "time": "2021-04-02T13:16:05.064Z",
+        "requestId": "6DSNF4885PPXBM0M",
+        "extendedRequestId": "YDecbRrpMbicIFqNjnBPC0c3D0Zn3BcL7lf1CzQ79KMu1DiTwiKPTauvrWIqx2kPu2jU1KiA7xw=",
+        "statusCode": 404,
+        "retryable": false,
+        "retryDelay": 61.424998761459904
+    }
+} 
+08:16:05.066 error: S3Bucket     NoSuchTagSet: The TagSet does not exist
+    at Request.extractError (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/services/s3.js:718:35)
+    at Request.callListeners (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/sequential_executor.js:106:20)
+    at Request.emit (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/sequential_executor.js:78:10)
+    at Request.emit (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:688:14)
+    at Request.transition (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:690:12)
+    at Request.callListeners (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/sequential_executor.js:116:18) 
+08:16:05.066 error: S3Bucket     getBucketTagging shouldRetryOnException retry: false 
+08:16:05.246 error: S3Bucket     getBucketTagging shouldRetryOnException {
+    "name": "getBucketTagging elasticbeanstalk-eu-west-3-760158738954",
+    "error": {
+        "message": "The TagSet does not exist",
+        "code": "NoSuchTagSet",
+        "region": null,
+        "time": "2021-04-02T13:16:05.244Z",
+        "requestId": "6DSX04PM9NDE5NEV",
+        "extendedRequestId": "MUmwd2o9+tkZDB/GzjbutWqoxYDDuSwwVGbBrwl8fdZKE5jZ9E3iU5W7qVn7rEVZHOyWnRYaGNQ=",
+        "statusCode": 404,
+        "retryable": false,
+        "retryDelay": 14.722686507742822
+    }
+} 
+08:16:05.246 error: S3Bucket     NoSuchTagSet: The TagSet does not exist
+    at Request.extractError (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/services/s3.js:718:35)
+    at Request.callListeners (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/sequential_executor.js:106:20)
+    at Request.emit (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/sequential_executor.js:78:10)
+    at Request.emit (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:688:14)
+    at Request.transition (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/request.js:690:12)
+    at Request.callListeners (/Users/utilisateur/grucloud-exemples/episode1/node_modules/aws-sdk/lib/sequential_executor.js:116:18) 
+08:16:05.247 error: S3Bucket     getBucketTagging shouldRetryOnException retry: false 
+08:16:08.603 error: CliUtils     event DONE but aws::Listing was not created or is already deleted 
+08:16:08.613 error: ProviderGru  cannot find type S3Object on provider aws 
+08:16:08.613 error: CoreProvider findLive cannot find type S3Object 
+08:16:10.155 error: ProviderGru  planApply start error {
+    "generatedMessage": true,
+    "code": "ERR_ASSERTION",
+    "expected": true,
+    "operator": "=="
+} 
+08:16:36.648 error: ProviderGru  cannot find type CloudFrontDistribution on provider aws 
