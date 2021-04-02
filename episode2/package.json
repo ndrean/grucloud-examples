@@ -1,5 +1,5 @@
 {
-  "name": "grucloud-episode1",
+  "name": "grucloud-episode2",
   "version": "1.0.0",
   "main": "iac.js",
   "scripts": {
@@ -8,7 +8,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@grucloud/provider-aws": "^1.10.2"
+    "@grucloud/provider-aws": "^1.10.2",
+    "mime-types": "^2.1.30",
+    "rubico": "^1.6.23"
   },
   "description": ""
 }
