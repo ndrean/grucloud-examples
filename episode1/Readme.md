@@ -1,11 +1,9 @@
 # GruCloud Episode 1
 
-Given an AWS IAM, with AWS-CLI installed:
-
 ```sh
 npm install -g @grucloud/cor
 npm init [...]
-npm install @grucloud/provider-aw
+npm install @grucloud/provider-aws
 ```
 
 Full explanation at <https://dev.to/ndrean/automate-your-web-site-deployments-on-aws-s3-with-grucloud-episode-1-2c2e>
