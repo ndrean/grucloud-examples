@@ -1,0 +1,130 @@
+digraph graphname {
+  rankdir=LR; 
+  subgraph "cluster_aws" {
+fontname=Helvetica
+color="#383838"
+label=<<FONT color='#383838' POINT-SIZE="20"><B>aws</B></FONT>>;
+node [shape=box fontname=Helvetica color="#383838"]
+"S3Bucket::tutogrucloud2.com" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Bucket</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">tutogrucloud2.com</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::asset-manifest.json" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">asset-manifest.json</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::favicon.ico" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">favicon.ico</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::index.html" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">index.html</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::logo192.png" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">logo192.png</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::logo512.png" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">logo512.png</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::manifest.json" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">manifest.json</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::robots.txt" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">robots.txt</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/css/main.ab7136cd.chunk.css" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/css/main.ab7136cd.chunk.css</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/css/main.ab7136cd.chunk.css.map" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/css/main.ab7136cd.chunk.css.map</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/js/2.1b7af346.chunk.js" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/js/2.1b7af346.chunk.js</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/js/2.1b7af346.chunk.js.LICENSE.txt" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/js/2.1b7af346.chunk.js.LICENSE.txt</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/js/2.1b7af346.chunk.js.map" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/js/2.1b7af346.chunk.js.map</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/js/3.58f74695.chunk.js" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/js/3.58f74695.chunk.js</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/js/3.58f74695.chunk.js.map" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/js/3.58f74695.chunk.js.map</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/js/main.8bc31107.chunk.js" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/js/main.8bc31107.chunk.js</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/js/main.8bc31107.chunk.js.map" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/js/main.8bc31107.chunk.js.map</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/js/runtime-main.cf331991.js" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/js/runtime-main.cf331991.js</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/js/runtime-main.cf331991.js.map" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/js/runtime-main.cf331991.js.map</FONT><br align="left" /></td></tr>
+          </table>>];
+"S3Object::static/media/logo.6ce24c58.svg" [label=<
+          <table color='#383838' border="0">
+             <tr><td align="text"><FONT color='#707070' POINT-SIZE="10"><B>S3Object</B></FONT><br align="left" /></td></tr>
+             <tr><td align="text"><FONT color='#383838' POINT-SIZE="13">static/media/logo.6ce24c58.svg</FONT><br align="left" /></td></tr>
+          </table>>];
+}
+
+  "S3Object::asset-manifest.json" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::favicon.ico" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::index.html" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::logo192.png" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::logo512.png" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::manifest.json" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::robots.txt" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/css/main.ab7136cd.chunk.css" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/css/main.ab7136cd.chunk.css.map" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/js/2.1b7af346.chunk.js" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/js/2.1b7af346.chunk.js.LICENSE.txt" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/js/2.1b7af346.chunk.js.map" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/js/3.58f74695.chunk.js" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/js/3.58f74695.chunk.js.map" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/js/main.8bc31107.chunk.js" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/js/main.8bc31107.chunk.js.map" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/js/runtime-main.cf331991.js" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/js/runtime-main.cf331991.js.map" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+"S3Object::static/media/logo.6ce24c58.svg" -> "S3Bucket::tutogrucloud2.com" [color="#383838"];
+
+}

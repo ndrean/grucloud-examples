@@ -1,0 +1,16 @@
+{
+  "name": "module-aws-s3-http",
+  "version": "1.0.0",
+  "main": "iac.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grucloud/provider-aws": "^1.10.2",
+    "mime-types": "^2.1.30",
+    "rubico": "^1.6.23"
+  },
+  "description": ""
+}
