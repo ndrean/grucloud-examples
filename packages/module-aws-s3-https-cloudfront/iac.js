@@ -1,16 +1,12 @@
 const assert = require("assert");
 const { makeDomainName } = require("./dumpster");
-// const { AwsProvider } = require("@grucloud/provider-aws");
 const ModuleCertificate = require("@grucloud/module-aws-certificate");
 const ModuleS3Http = require("../module-aws-s3-http");
-
-// exports.config = require("./config");
-// exports.hooks = require("./hooks");
 
 const createResources = async ({provider}) => {
   
   const s3HttpResources = await ModuleS3Http.createResources({ provider });
-  assert(s3HttpResources)
+  asssert(s3HttpResources)
   const certificatesResources = await ModuleCertificate.createResources({
     provider,
   });

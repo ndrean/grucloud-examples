@@ -1,6 +1,6 @@
 // const assert = require("assert");
 const { AwsProvider } = require("@grucloud/provider-aws");
-const ModuleCloudFront = require("../module-aws-s3-https-cloudfront") //+
+const ModuleCloudFront = require("../module-aws-s3-https-cloudfront")
 
 exports.createStack = async () => {
   const provider = AwsProvider({
@@ -11,7 +11,7 @@ exports.createStack = async () => {
   });
 
   
-  const cloudFrontResources = await ModuleCloudFront.createResources({provider}) //+
+  const cloudFrontResources = await ModuleCloudFront.createResources({provider}) 
   
   return {
     provider,
