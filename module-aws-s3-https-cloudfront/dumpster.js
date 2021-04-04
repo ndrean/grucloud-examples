@@ -4,12 +4,6 @@ const { pipe, map, filter } = require("rubico");
 const { includes } = require("rubico/x");
 
 
-const makeDomainName = ({ DomainName, stage }) =>
-  `${stage == "production" ? "" : `${stage}.`}${DomainName}`;
-
-exports.makeDomainName = makeDomainName;
-
-
 const exludesFiles = [".DS_Store"];
 
 const getFilesWalk = ({ dir, dirResolved }) =>
