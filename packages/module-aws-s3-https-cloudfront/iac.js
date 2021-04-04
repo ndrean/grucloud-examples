@@ -1,33 +1,29 @@
-// const assert = require("assert");
-// const { makeDomainName } = require("./dumpster");
-const { AwsProvider } = require("@grucloud/provider-aws");
-// const ModuleCertificate = require("@grucloud/module-aws-certificate");
-// const ModuleS3Http = require("../module-aws-s3-http");
-const ModuleCloudFront = require("../module-aws-s3-https-cloudfront") //+
-// const config = require("../module-aws-s3-https-cloudfront/config");
+const assert = require("assert");
+const { makeDomainName } = require("./dumpster");
+// const { AwsProvider } = require("@grucloud/provider-aws");
+const ModuleCertificate = require("@grucloud/module-aws-certificate");
+const ModuleS3Http = require("../module-aws-s3-http");
 
-exports.createStack = async () => {
-  const provider = AwsProvider({
-    configs: [
-      require("./config"),
-      // ModuleS3Http.config,
-      // ModuleCertificate.config,
-      ModuleCloudFront.config, //+
-    ],
-  });
+// exports.config = require("./config");
+// exports.hooks = require("./hooks");
 
-  /*
+const createResources = async ({provider}) => {
+  
   const s3HttpResources = await ModuleS3Http.createResources({ provider });
+  assert(s3HttpResources)
   const certificatesResources = await ModuleCertificate.createResources({
     provider,
   });
-  */
-  const cloudFrontResources = await ModuleCloudFront.createResources({provider}) //+
-
+  assert(certificatesResources.certificate)
   
-  // const {website: {bucketName}, stage, certificate}  = provider.config
-
-  /*
+  const {config} = provider
+  assert(config.website)
+ 
+  const { website:{bucketName}, certificate:{domainName,rootDomainName }, stage} = config  
+  assert(bucketName)
+  assert(domainName)
+  
+  
   const distribution = await provider.makeCloudFrontDistribution({
     name: `distribution-${bucketName}`,
     dependencies: { website: s3HttpResources.websiteBucket, certificate: certificatesResources.certificate},
@@ -35,7 +31,7 @@ exports.createStack = async () => {
       return {
         PriceClass: "PriceClass_100",
         Comment: `${bucketName}.s3.amazonaws.com`,
-        Aliases: { Quantity: 1, Items: [certificate.domainName] },
+        Aliases: { Quantity: 1, Items: [domainName] },
         DefaultRootObject: "index.html",
         DefaultCacheBehavior: {
           TargetOriginId: `S3-${bucketName}`,
@@ -68,16 +64,16 @@ exports.createStack = async () => {
   });
 
   const hostedZoneName = `${makeDomainName({
-    DomainName: certificate.domainName,
+    DomainName: domainName,
     stage,
   })}.`;
 
   const domain = await provider.useRoute53Domain({
-    name: certificate.rootDomainName,
+    name: rootDomainName,
   });
 
   const hostedZone = await provider.makeHostedZone({
-    name: `${certificate.domainName}.`,
+    name: `${domainName}.`,
     dependencies: { domain },
   });
 
@@ -98,14 +94,10 @@ exports.createStack = async () => {
     },
   });
 
-  */
-
   return {
-    provider,
-    resources: { //s3HttpResources, certificatesResources, 
-      cloudFrontResources, //+
-      // - recordCloudFront,  distribution, hostedZone, 
-    },
-    hooks: require("./hooks"),
+     s3HttpResources, certificatesResources, recordCloudFront,
+      distribution, hostedZone,
   };
 };
+
+exports.createResources = createResources
