@@ -5,19 +5,35 @@ const ModuleS3Http = require("../module-aws-s3-http");
 
 const createResources = async ({provider}) => {
   
-  const s3HttpResources = await ModuleS3Http.createResources({ provider });
-  asssert(s3HttpResources)
-  const certificatesResources = await ModuleCertificate.createResources({
-    provider,
-  });
-  assert(certificatesResources.certificate)
-  
   const {config} = provider
   assert(config.website)
  
   const { website:{bucketName}, certificate:{domainName,rootDomainName }, stage} = config  
   assert(bucketName)
   assert(domainName)
+
+  const s3HttpResources = await ModuleS3Http.createResources({ provider });
+  assert(s3HttpResources)
+
+  const hostedZoneName = `${makeDomainName({
+    DomainName: domainName,
+    stage,
+  })}.`;
+
+  const domain = await provider.useRoute53Domain({
+    name: rootDomainName,
+  });
+
+  const hostedZone = await provider.makeHostedZone({
+    name: `${domainName}.`,
+    dependencies: { domain },
+  });
+  const certificatesResources = await ModuleCertificate.createResources({
+    provider, resources: { hostedZone }
+  });
+  assert(certificatesResources.certificate)
+  
+  
   
   
   const distribution = await provider.makeCloudFrontDistribution({
@@ -59,19 +75,7 @@ const createResources = async ({provider}) => {
     },
   });
 
-  const hostedZoneName = `${makeDomainName({
-    DomainName: domainName,
-    stage,
-  })}.`;
-
-  const domain = await provider.useRoute53Domain({
-    name: rootDomainName,
-  });
-
-  const hostedZone = await provider.makeHostedZone({
-    name: `${domainName}.`,
-    dependencies: { domain },
-  });
+  
 
   const recordCloudFront = await provider.makeRoute53Record({
     name: hostedZoneName,

@@ -8,7 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@grucloud/provider-aws": "^1.10.9",
+    "@grucloud/provider-aws": "^1.10.22",
     "mime-types": "^2.1.30",
     "rubico": "^1.6.23"
   },

@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>GruCloud</h1>
-        <h3>Episode: React app served with HTTPS</h3>
+        <h3>Episode 3: React app served with HTTPS</h3>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
