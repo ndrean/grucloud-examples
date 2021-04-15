@@ -9,11 +9,6 @@ exports.createStack = async () => {
       ModuleS3Http.config
     ]
   });
-  // const {config} = provider
-  // assert(config.website)
- 
-  // const { website:{bucketName}} = config  
-  // assert(bucketName)
 
   const s3HttpResources = await ModuleS3Http.createResources({ provider });
   assert(s3HttpResources)
