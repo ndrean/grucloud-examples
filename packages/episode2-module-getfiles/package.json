@@ -1,0 +1,17 @@
+{
+  "name": "grucloud-episode2-module-getfiles",
+  "version": "1.0.0",
+  "main": "iac.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grucloud/module-aws-certificate": "^1.10.22",
+    "@grucloud/provider-aws": "^1.10.22",
+    "mime-types": "^2.1.30",
+    "rubico": "^1.6.23"
+  },
+  "description": ""
+}
