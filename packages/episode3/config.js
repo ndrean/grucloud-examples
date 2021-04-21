@@ -5,11 +5,11 @@ module.exports = () => ({
   projectName: pkg.name,
   region: "us-east-1",
   website: {
-    bucketName: "tutogrucloud3.com",
+    bucketName: "grucloud-examples.net",
     websiteDir: path.resolve(__dirname, "./frontend/ep3-react/build/"),
   },
   certificate: {
-    rootDomainName: "thedownwinder.com",
-    domainName: "test.thedownwinder.com",
+    rootDomainName: "grucloud-examples.net",
+    domainName: "ep3.grucloud-examples.net",
   },
 });

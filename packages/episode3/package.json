@@ -8,10 +8,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@grucloud/module-aws-certificate": "^1.10.22",
-    "@grucloud/provider-aws": "^1.10.22",
+    "@grucloud/module-aws-certificate": "^1.10.25",
+    "@grucloud/provider-aws": "^1.10.25",
     "mime-types": "^2.1.30",
-    "rubico": "^1.6.23"
+    "rubico": "^1.6.23",
+    "axios": "^0.21.1"
   },
   "description": ""
 }

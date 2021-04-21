@@ -1,24 +1,22 @@
 const assert = require("assert");
-const { makeDomainName } = require("./dumpster");
 const ModuleCertificate = require("@grucloud/module-aws-certificate");
 const ModuleS3Http = require("../module-aws-s3-http");
 
-const createResources = async ({provider}) => {
-  
-  const {config} = provider
-  assert(config.website)
- 
-  const { website:{bucketName}, certificate:{domainName,rootDomainName }, stage} = config  
-  assert(bucketName)
-  assert(domainName)
+const createResources = async ({ provider }) => {
+  const { config } = provider;
+  assert(config.website);
+
+  const {
+    website: { bucketName },
+    certificate: { domainName, rootDomainName },
+  } = config;
+  assert(bucketName);
+  assert(domainName);
 
   const s3HttpResources = await ModuleS3Http.createResources({ provider });
-  assert(s3HttpResources)
+  assert(s3HttpResources);
 
-  const hostedZoneName = `${makeDomainName({
-    DomainName: domainName,
-    stage,
-  })}.`;
+  const hostedZoneName = `${domainName}`;
 
   const domain = await provider.useRoute53Domain({
     name: rootDomainName,
@@ -29,16 +27,17 @@ const createResources = async ({provider}) => {
     dependencies: { domain },
   });
   const certificatesResources = await ModuleCertificate.createResources({
-    provider, resources: { hostedZone }
+    provider,
+    resources: { hostedZone },
   });
-  assert(certificatesResources.certificate)
-  
-  
-  
-  
+  assert(certificatesResources.certificate);
+
   const distribution = await provider.makeCloudFrontDistribution({
     name: `distribution-${bucketName}`,
-    dependencies: { website: s3HttpResources.websiteBucket, certificate: certificatesResources.certificate},
+    dependencies: {
+      website: s3HttpResources.websiteBucket,
+      certificate: certificatesResources.certificate,
+    },
     properties: ({}) => {
       return {
         PriceClass: "PriceClass_100",
@@ -74,8 +73,7 @@ const createResources = async ({provider}) => {
       };
     },
   });
-
-  
+  assert(distribution);
 
   const recordCloudFront = await provider.makeRoute53Record({
     name: hostedZoneName,
@@ -93,11 +91,13 @@ const createResources = async ({provider}) => {
       };
     },
   });
-
   return {
-     s3HttpResources, certificatesResources, recordCloudFront,
-      distribution, hostedZone,
+    s3HttpResources,
+    certificatesResources,
+    recordCloudFront,
+    distribution,
+    hostedZone,
   };
 };
 
-exports.createResources = createResources
+exports.createResources = createResources;
