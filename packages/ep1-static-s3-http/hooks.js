@@ -2,9 +2,9 @@ const assert = require("assert");
 const Axios = require("axios");
 
 module.exports = ({ resources }) => {
-  // console.log(resources)
-  const { websiteBucket}  = resources;
-  assert(websiteBucket.name)
+  console.log("res", resources);
+  const { websiteBucket } = resources;
+  assert(websiteBucket.name);
   const bucketStorageUrl = `http://${websiteBucket.name}.s3-website-us-east-1.amazonaws.com`;
 
   const axios = Axios.create({
@@ -19,6 +19,7 @@ module.exports = ({ resources }) => {
           name: `get ${bucketStorageUrl}`,
           command: async () => {
             const result = await axios.get(bucketStorageUrl);
+            console.log(result);
             assert.equal(result.headers["content-type"], `text/html`);
             assert.equal(result.status, 200);
           },
@@ -27,4 +28,3 @@ module.exports = ({ resources }) => {
     },
   };
 };
-

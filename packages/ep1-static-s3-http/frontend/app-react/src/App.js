@@ -7,6 +7,7 @@ function App() {
       <header className="App-header">
         <h1>GruCloud</h1>
         <h3>Episode 1: React app served with HTTP</h3>
+        <h4>Modified</h4>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.

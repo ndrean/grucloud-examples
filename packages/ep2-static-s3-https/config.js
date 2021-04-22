@@ -6,10 +6,10 @@ module.exports = () => ({
   region: "us-east-1",
   website: {
     bucketName: "grucloud-examples.net",
-    websiteDir: path.resolve(__dirname, "./frontend/ep3-react/build/"),
+    websiteDir: path.resolve(__dirname, "./frontend/app-react/build/"),
   },
   certificate: {
     rootDomainName: "grucloud-examples.net",
-    domainName: "ep3.grucloud-examples.net",
+    domainName: "ep2.grucloud-examples.net",
   },
 });
