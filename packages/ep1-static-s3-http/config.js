@@ -5,7 +5,7 @@ module.exports = () => ({
   projectName: pkg.name,
   region: "us-east-1",
   website: {
-    bucketName: "tutogrucloud2-module.com",
-    websiteDir: path.resolve(__dirname, "./frontend/ep2-react/build/"),
+    bucketName: "tutogrucloud1-module.com",
+    websiteDir: path.resolve(__dirname, "./frontend/app-react/build/"),
   },
 });

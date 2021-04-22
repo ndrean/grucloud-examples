@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <h1>GruCloud </h1>
+      <h3>Episode 1 bis: without module</h3>
       <header className="App-header">
-        <h1>GruCloud</h1>
-        <h3>Episode 2 with getFiles module: React app served with HTTP</h3>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
