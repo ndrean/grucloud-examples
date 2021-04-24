@@ -28,5 +28,5 @@ exports.createStack = async () => {
     }),
   });
 
-  return { provider, resources: { s3Bucket }, hooks: require("./hooks") };
+  return { provider, resources: { s3Bucket }, hooks: [require("./hooks")] };
 };

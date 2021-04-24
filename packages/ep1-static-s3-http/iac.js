@@ -1,6 +1,7 @@
 const assert = require("assert");
 const { AwsProvider } = require("@grucloud/provider-aws");
 const ModuleS3Http = require("../module-aws-s3-http");
+const hook = require("./hook");
 
 exports.createStack = async () => {
   const provider = AwsProvider({
@@ -13,6 +14,6 @@ exports.createStack = async () => {
   return {
     provider,
     resources: s3HttpResources,
-    hooks: require("./hooks"),
+    hooks: [hook],
   };
 };

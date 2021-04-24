@@ -40,5 +40,9 @@ exports.createStack = async () => {
     })
   )(files);
 
-  return { provider, resources: { websiteBucket }, hooks: require("./hooks") };
+  return {
+    provider,
+    resources: { websiteBucket },
+    hooks: [require("./hooks")],
+  };
 };

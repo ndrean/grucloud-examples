@@ -14,7 +14,6 @@ exports.createStack = async () => {
   return {
     provider,
     resources: cloudFrontResources,
-
-    hooks: require("./hooks"),
+    hooks: [require("./hooks")],
   };
 };

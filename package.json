@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "updatePacks": "lerna run updatePackages"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,12 @@
   },
   "homepage": "https://github.com/ndrean/grucloud-exemples#readme",
   "dependencies": {
-    "lerna": "^4.0.0"
+    "create-grucloud-episode1": "file:packages/ep0-single-file-http",
+    "create-grucloud-episode1b": "file:packages/ep1b-static-s3-http-no-module",
+    "create-grucloud-static-hhtp": "file:packages/ep1-static-s3-http",
+    "create-grucloud-static-https": "file:packages/ep2-static-s3-https",
+    "create-module-aws-s3-http": "file:packages/module-aws-s3-http",
+    "create-module-aws-s3-https-cloudfront": "file:packages/module-aws-s3-https-cloudfront",
+    "npm-check-updates": "^11.5.1"
   }
 }

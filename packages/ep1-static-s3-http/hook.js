@@ -2,7 +2,6 @@ const assert = require("assert");
 const Axios = require("axios");
 
 module.exports = ({ resources }) => {
-  console.log("res", resources);
   const { websiteBucket } = resources;
   assert(websiteBucket.name);
   const bucketStorageUrl = `http://${websiteBucket.name}.s3-website-us-east-1.amazonaws.com`;
@@ -11,7 +10,6 @@ module.exports = ({ resources }) => {
     timeout: 15e3,
     withCredentials: true,
   });
-
   return {
     onDeployed: {
       actions: [

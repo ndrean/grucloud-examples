@@ -1,13 +1,13 @@
 const assert = require("assert");
 const Axios = require("axios");
-const ModuleCloudFront = require("../module-aws-s3-https-cloudfront")
+// const ModuleCloudFront = require("../module-aws-s3-https-cloudfront")
 
 module.exports = ({ resources }) => {
   const { s3HttpResources } = resources;
-  assert(s3HttpResources)
-  assert(s3HttpResources.websiteBucket.name)
+  assert(s3HttpResources);
+  assert(s3HttpResources.websiteBucket.name);
   const bucketStorageUrl = `http://${s3HttpResources.websiteBucket.name}.s3-website-us-east-1.amazonaws.com`;
-  
+
   const axios = Axios.create({
     timeout: 15e3,
     withCredentials: true,
